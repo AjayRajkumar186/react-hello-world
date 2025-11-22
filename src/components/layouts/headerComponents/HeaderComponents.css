@@ -1,0 +1,9 @@
+.header{
+  font-weight: 600;
+  font-size: 22px;
+  font-family: Verdana;
+  text-align: center;
+  padding: 7px;
+  border: 2px solid black;
+  margin-bottom: 10px;
+}

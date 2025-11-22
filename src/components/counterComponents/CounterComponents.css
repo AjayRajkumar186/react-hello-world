@@ -1,0 +1,19 @@
+
+.count h2
+{
+text-align: center;
+border: none;
+padding: 3px;
+font-family: Arial;
+background-color: black;
+color: yellowgreen;
+}
+
+.count-container
+{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 15px;
+}
+

@@ -1,0 +1,33 @@
+nav {
+  display: block;
+  background-color: #706d22;
+  margin: 3px;
+}
+
+.nav-ul {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.nav-li a {
+  text-decoration: none;
+  color: #0e1b0c;   /* normal color */
+  font-size: 16px;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+.nav-li a.active {
+  color: #ffffff;   /* active link stays white */
+}
+
+h2{
+  border: 2px solid black;
+  margin: -2px 3px 3px 3px;
+  text-align: center;
+}
