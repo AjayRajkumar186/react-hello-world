@@ -23,8 +23,6 @@ const FormComponents = () => {
   const handlesubmit = (event) => {
     event.preventDefault()
     console.log(`firstName:${formData.firstName}, LastName:${formData.lastName}, Email:${formData.email}`);
-    console.log(formData);
-
   }
   return (
     <div>
