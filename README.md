@@ -17,7 +17,8 @@ If you are developing a production application, we recommend using TypeScript wi
   
 ## Push code in Git
 
-
 ## new feature adding
 
 ## feature2.0
+
+## bugs upDates
