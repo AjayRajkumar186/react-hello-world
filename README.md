@@ -22,3 +22,4 @@ If you are developing a production application, we recommend using TypeScript wi
 ## feature2.0
 
 ## bugs upDates
+## new bugs updates
