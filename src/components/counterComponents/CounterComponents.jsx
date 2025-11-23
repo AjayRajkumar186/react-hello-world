@@ -3,15 +3,15 @@ import './CounterComponents.css'
 
 const CounterComponents = () => {
 
-  /*  const [countvariable, setCountvariable] = useState(0); */
+  /*   const [countvariable, setCountvariable] = useState(0); 
 
-  /*  function decreaseByOne() {
+    function decreaseByOne() {
      setCountvariable(countvariable - 1)
    }
  
    function increaseByOne() {
      setCountvariable(countvariable + 1)
-   } */
+   }  */
 
 
   /* its work in console not in ui like web page 
@@ -27,7 +27,7 @@ const CounterComponents = () => {
      console.log(countvariable)
    } */
 
-  const [countvariable, setCountvariable] = useState(0);
+   const [countvariable, setCountvariable] = useState(0);
 
   const increase = () => {
     setCountvariable(countvariable + 1)
@@ -35,7 +35,7 @@ const CounterComponents = () => {
   };
   const decrease = () => {
     setCountvariable(countvariable - 1)
-  };
+  }; 
 
   const reset = () => {
     setCountvariable(0)
