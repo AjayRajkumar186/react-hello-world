@@ -1,22 +1,20 @@
 import React, { useState } from 'react';
 import './WeatherAppComponents.css';
 import axios from 'axios';
+import weatherservice from '../../services/Weather';
 
 const WeatherAppComponents = () => {
-  const KEY = `721a52b477d842f4950153121250611`;
-  const BASE_URL = `http://api.weatherapi.com/v1`;
+
 
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // prevent page reload
+    e.preventDefault();
 
     try {
-      const response = await axios.get(
-        `${BASE_URL}/current.json?key=${KEY}&q=${city}`
-      );
-      setWeather(response.data);
+      const response = await weatherservice.getWeather(city)
+      setWeather(response);
     } catch (error) {
       console.error('Error fetching weather:', error);
     }
