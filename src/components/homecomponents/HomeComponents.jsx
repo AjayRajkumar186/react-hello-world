@@ -7,6 +7,7 @@ import UserPostComponents from '../userComponents/UserPostComponents'
 import './HomeComponents.css'
 import FormComponents from '../FormComponents/FormComponents'
 import WelcomeComponents from '../ContextComponents/welcomeComponents'
+import WeatherAppComponents from '../WeatherAppComponents/WeatherAppComponents'
 
 
 
@@ -33,6 +34,7 @@ const HomeComponents = () => {
           <li className='nav-li'><NavLink to="/post">UserPost</NavLink></li>
           <li className='nav-li'><NavLink to="/addform">Form</NavLink></li>
           <li className='nav-li'><NavLink to="/context">Context</NavLink></li>
+          <li className='nav-li'><NavLink to="/weather">Weather</NavLink></li>
         </ul>
       </nav>
 
@@ -44,6 +46,7 @@ const HomeComponents = () => {
         <Route path="/post" element={<UserPostComponents />} />
         <Route path='/addform' element={<FormComponents/>} />
         <Route path='/context' element={<WelcomeComponents userName={'RajKumar'}/>} />
+        <Route path='/weather' element={<WeatherAppComponents/>} />
       </Routes>
     </BrowserRouter>
   )

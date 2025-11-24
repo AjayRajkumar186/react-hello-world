@@ -1,0 +1,18 @@
+.container-wea {
+  text-align: center;
+  margin-top: 0px;
+  color: rgb(0, 0, 0);
+}
+
+input[type="text"] {
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: rgb(10, 102, 194);
+  box-shadow: 0 0 5px rgba(10, 102, 194, 0.5);
+}
