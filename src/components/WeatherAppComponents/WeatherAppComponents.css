@@ -4,17 +4,18 @@
   font-family: 'Segoe UI', sans-serif;
   background-image: url(/public/pexels-tahir-shaw-50609-186980.jpg);
   min-height: 87.3vh;
-  padding: 30px;
+  
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
 }
 
-h2 {
-  margin-bottom: 20px;
+h3 {
+  margin: 3px 0 20px 0;
   font-size: 28px;
   font-weight: bold;
+  color: white;
 }
 
 form {

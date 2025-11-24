@@ -29,7 +29,7 @@ const WeatherAppComponents = () => {
 
   return (
     <div className="container-wea">
-      <h2>Check Weather Condition</h2>
+      <h3>Check Weather Condition</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
