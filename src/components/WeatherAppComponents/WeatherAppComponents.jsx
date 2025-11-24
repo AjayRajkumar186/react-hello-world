@@ -9,9 +9,8 @@ const WeatherAppComponents = () => {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
 
-  const checkWeather = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(); // prevent page reload
-    if (!city) return;
 
     try {
       const response = await axios.get(
@@ -31,7 +30,7 @@ const WeatherAppComponents = () => {
   return (
     <div className="container-wea">
       <h2>Check Weather Condition</h2>
-      <form onSubmit={checkWeather}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="city"
