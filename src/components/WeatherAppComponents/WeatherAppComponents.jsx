@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './WeatherAppComponents.css';
 import axios from 'axios';
+import weatherservice from '../../services/Weather';
 
 const WeatherAppComponents = () => {
   const KEY = `721a52b477d842f4950153121250611`;
@@ -10,18 +11,16 @@ const WeatherAppComponents = () => {
   const [weather, setWeather] = useState(null);
 
   const checkWeather = async (e) => {
-    e.preventDefault(); // prevent page reload
-    if (!city) return;
+    e.preventDefault();
 
     try {
-      const response = await axios.get(
-        `${BASE_URL}/current.json?key=${KEY}&q=${city}`
-      );
-      setWeather(response.data);
+      const response = await weatherservice.getWeather(city)
+      setWeather(response);
     } catch (error) {
       console.error('Error fetching weather:', error);
     }
   };
+
 
   const clearInput = () => {
     setCity('');
@@ -49,27 +48,22 @@ const WeatherAppComponents = () => {
 
       {weather && (
         <div className="weather-result">
-          <div className='weather-container'>
-            <div className='weather-box'>
+          <div className="weather-container">
+            <div className="weather-box">
               <h3>{weather.location.name}, {weather.location.region}</h3>
-              <icon className="src">{weather.current.condition.icon}</icon>
+              <img src={weather.current.condition.icon} alt="Weather icon" />
               <p>Temperature: {weather.current.temp_c}°C</p>
             </div>
 
-            <div className='weather-box'>
-              
+            <div className="weather-box">
               <p>Condition: {weather.current.condition.text}</p>
             </div>
 
-              <div className='weather-box'>
-              <p>Condition: {weather.current.condition.text}</p>
-              <p>Condition: {weather.current.condition.text}</p>
+            <div className="weather-box">
+              <p>Feels Like: {weather.current.feelslike_c}°C</p>
+              <p>Wind: {weather.current.wind_kph} kph</p>
             </div>
-
           </div>
-
-          
-          
         </div>
       )}
     </div>
