@@ -1,6 +1,5 @@
 .container-wea {
   text-align: center;
-  color: #000000;
   font-family: 'Segoe UI', sans-serif;
   background-image: url(/public/pexels-tahir-shaw-50609-186980.jpg);
   min-height: 94.5vh;
@@ -10,9 +9,10 @@
   background-size: cover;
 }
 
-h3 {
+
+h1 {
   margin: 3px 0 20px 0;
-  font-size: 28px;
+  font-size: 4rem;
   font-weight: bold;
   color: white;
 }
@@ -21,7 +21,7 @@ form {
   margin-bottom: 25px;
 }
 
-input[type="text"] {
+input {
   padding: 12px 20px;
   border-radius: 25px;
   border: none;
@@ -29,9 +29,11 @@ input[type="text"] {
   outline: none;
   width: 250px;
   transition: box-shadow 0.3s ease;
+  margin-right: 1rem;
+  margin-top: 2rem;
 }
 
-input[type="text"]:focus {
+input:focus {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
@@ -62,7 +64,7 @@ input[type="text"]:focus {
 }
 
 .weather-result {
-  margin-top: 200px;
+  margin-top: 8rem;
 }
 
 .weather-container {
@@ -94,4 +96,10 @@ input[type="text"]:focus {
 .weather-box img {
   width: 60px;
   height: 60px;
+}
+
+#check-btn {
+  background-color: #4CAF50;
+  color: white;
+  margin-right: 1rem;
 }
