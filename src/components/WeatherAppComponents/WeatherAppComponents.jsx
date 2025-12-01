@@ -20,21 +20,31 @@ const WeatherAppComponents = () => {
           longitude: position.coords.longitude,
         };
         setUserLocation(coords);
-        fetchWeather(`${coords.latitude},${coords.longitude}`); 
+        fetchWeather(`${coords.latitude},${coords.longitude}`);
       });
     }
   }, []);
 
   // Unified function for fetching weather
-  const fetchWeather = async (query) => {
+  const fetchWeather = async (city) => {
     try {
-      const response = await axios.get(
-        `${BASE_URL}/current.json?key=${KEY}&q=${query}`
-      );
+      let response;
+
+      if (!city && userLocation) {
+        response = await axios.get(
+          `${BASE_URL}/current.json?key=${KEY}&q=${userLocation.latitude},${userLocation.longitude}`
+        );
+      } else {
+        // Otherwise, use the city name
+        response = await axios.get(
+          `${BASE_URL}/current.json?key=${KEY}&q=${city}`
+        );
+      }
+
       setWeather(response.data.current);
       setLocation(response.data.location);
     } catch (err) {
-      console.error('Error fetching weather data:', err);
+      console.error("Error fetching weather data:");
     }
   };
 
@@ -45,7 +55,7 @@ const WeatherAppComponents = () => {
   const handleCitySearch = () => {
     if (city) {
       fetchWeather(city);
-    }
+    } 
   };
 
   const clearInput = () => {
